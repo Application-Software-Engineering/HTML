@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ 14 Nov 24</title>
+</head>
+<body>
+    <!-- ## QUIZ MATKUL WEB DESIGN
+         ## FAHAD VIDJAR APRIZA
+         ## LP3I KARAWANG
+         ## TANGGAL 14 NOVEMBER 2024
+    -->
+    <script>
+        var barang_terjual = prompt("Input pemasukan:")
+        parseInt(barang_terjual)
+        var jasa = 0 
+        var komisi = 0
+        var total = 0
+        
+    if (barang_terjual !== null){
+        if (barang_terjual > 500000) {
+            jasa = 30000
+            komisi = barang_terjual*20/100
+            total = jasa+komisi 
+        } else if (barang_terjual > 200000){
+            jasa = 20000
+            komisi = barang_terjual*15/100
+            total = jasa+komisi 
+        } else if (barang_terjual > 0){
+            jasa = 10000
+            komisi = barang_terjual*10/100
+            total = jasa+komisi 
+        } else {
+            alert("Input Tidak Valid!")
+        }
+
+        document.write(`<h3>Total pemasukan Rp.${barang_terjual}</h3>`)
+        document.write(`<p>Uang jasa Rp.${jasa}</p>`)
+        document.write(`<p>Uang komisi Rp.${komisi}</p>`)
+        document.write(`<p>Total yang didapat salesman Rp.${total}</p>`)
+
+    } else {
+        alert("Inputan Tidak Boleh Kosong.")
+    }
+    </script>
+</body>
+</html>
